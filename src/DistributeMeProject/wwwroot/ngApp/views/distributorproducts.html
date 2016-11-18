@@ -1,0 +1,21 @@
+﻿<h2>Products Catalogue</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>On Sale?</th>
+        <th>Sale Percentage</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+    </tr>
+    <tr ng-repeat="product in controller.products">
+        <td>{{product.name}}</td>
+        <td>{{product.price | currency}}</td>
+        <td>{{product.isOnSale}}</td>
+        <td>{{product.salePercentage}}</td>
+        <td><button class="btn" ng-click="controller.showModal(product)">Edit</button></td>
+        <td><button type="submit" class="alert-danger" ng-click="controller.delete(product.id)">Delete</button></td>
+    </tr>
+</table>

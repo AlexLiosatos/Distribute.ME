@@ -1,0 +1,16 @@
+﻿<h2>{{controller.distributor.name}}</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name Of Distributor</th>
+        <th>Zip Code</th>
+        <th>Product Inventory</th>
+        <th>Add Product</th>
+    </tr>
+    <tr>
+        <td>{{controller.distributor.name}}</td>
+        <td>{{controller.distributor.zipCodeRegion}}</td>
+        <td><button class="alert-link" type="submit" ng-click="productDetails(myDistributor.id)" ui-sref="distributorproducts({id: myDistributor.id})">View Product Inventory</button></td>
+        <td><button class="alert-success" type="submit" ng-click="addProduct(myDistributor.id)" ui-sref="adddistributorproduct">Add Product</button></td>
+    </tr>
+</table>

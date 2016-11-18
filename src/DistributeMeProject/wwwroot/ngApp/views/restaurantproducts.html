@@ -1,0 +1,20 @@
+﻿<h2>Products Inventory</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Quantity</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Delete</th>
+        <th>Order</th>
+
+    </tr>
+    <tr ng-repeat="product in controller.restaurantProducts track by $index">
+        <td>{{product.quantity}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price | currency}}</td>
+        <td><button type="submit" class="alert-danger" ng-click="controller.consume(product)">Consume</button></td>
+        <td><button class="alert-success" ng-click="controller.order(product)">Order</button></td>
+
+    </tr>
+</table>

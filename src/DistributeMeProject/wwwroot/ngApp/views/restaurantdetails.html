@@ -1,0 +1,16 @@
+﻿<h2>{{controller.restaurant.name}}</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name Of Restaurant</th>
+        <th>Zip Code</th>
+        <th>Product Inventory</th>
+        <th>Order Products</th>
+    </tr>
+    <tr>
+        <td>{{controller.restaurant.name}}</td>
+        <td>{{controller.restaurant.zipCodeRegion}}</td>
+        <td><button class="alert-link" type="submit" ui-sref="restaurantproducts({id: controller.restaurant.id})">View Product Inventory</button></td>
+        <td><button class="alert-success" type="submit" ui-sref="orderrestaurantproduct({id: controller.restaurant.id})">Order Products</button></td>
+    </tr>
+</table>

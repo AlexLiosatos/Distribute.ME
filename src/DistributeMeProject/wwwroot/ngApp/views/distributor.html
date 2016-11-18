@@ -1,0 +1,25 @@
+﻿<h2>{{controller.message}}</h2>
+
+<form ng-submit="controller.add(distributor)">
+    <input ng-model="distributor.name" placeholder="Name Of Distributor" />
+    <input ng-model="distributor.zipCodeRegion" placeholder="Zip Code" />
+    <input type="submit" value="Add Distributor" />
+</form>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Name Of Distributor</th>
+        <th>Zip Code</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="distributor in controller.distributors">
+        <td><a ui-sref="distributordetails({id: distributor.id})">{{distributor.name}}</a></td>
+        <td>{{distributor.zipCodeRegion}}</td>
+        <td><button class="btn" ng-click="controller.showModal(distributor)">Edit</button></td>
+        <td><button type="submit" class="alert-danger" ng-click="controller.delete(distributor.id)">Delete</button></td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,20 @@
+﻿<h2>Add Products</h2>
+
+
+<form ng-submit="controller.add(product)">
+    <input ng-model="product.name" placeholder="Name" />
+    $<input ng-model="product.price" placeholder="Price "/>
+    <input ng-model="product.isOnSale" placeholder="On Sale? (true/false) "/>
+    <input ng-model="product.salePercentage" placeholder="Sale Percentage (0-100)" />%
+    <input type="submit" value="Add Product" />
+</form>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>List Of Products</th>
+    </tr>
+    <tr ng-repeat="product in controller.products">
+        <td>{{product.name}}</td>
+    </tr>
+</table>

@@ -1,0 +1,14 @@
+﻿<table class="table table-striped">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Distributor</th>
+        <th>Purchase</th>
+    </tr>
+    <tr ng-repeat="product in controller.distributorProducts">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.distributorName}}</td>
+        <td><button class="alert-success" type="submit" ng-click="controller.orderProduct(product)">Order Product</button></td>
+    </tr>
+</table>

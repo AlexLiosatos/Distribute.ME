@@ -1,0 +1,12 @@
+﻿<div>
+    <div class="modal-header">
+        <h1>Editing: {{modal.restaurant.name}}</h1>
+    </div>
+    <div class="modal-body">
+        <input placeholder="{{modal.restaurant.name}}" ng-model="modal.restaurant.name" />
+        <input placeholder="{{modal.restaurant.zipCodeRegion}}" ng-model="modal.restaurant.zipCodeRegion" />
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="modal.ok()">Edit And Close</button>
+    </div>
+</div>c

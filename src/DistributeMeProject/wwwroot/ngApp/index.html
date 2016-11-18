@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 3, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">Distribute.Me</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a ui-sref="home">Home</a>
+						</li>
+					    <li>
+					        <a ui-sref="about">About</a>
+					    </li>
+					    <li ng-show="account.getClaim('isRestaurant')">
+					        <span ng-show="account.isLoggedIn()">
+                                <a ui-sref="restaurant">Restaurant</a>
+                            </span>
+					    </li>
+					    <li ng-show="account.getClaim('isDistributor')">
+					        <span ng-show="account.isLoggedIn()">
+                                <a ui-sref="distributor">Distributor</a>
+                            </span>
+					    </li>
+					    <li>
+					        <a ui-sref="login" ng-show="!account.isLoggedIn()">Log In</a>
+					    </li>
+                        <li>
+                            <a ui-sref="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Log Out</a>
+                            <div ng-show="account.isLoggedIn()">[{{account.getUserName}}]</div>
+                        </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-4">
+			<div class="jumbotron">
+				<h2>
+					Distributors!
+				</h2>
+				<p>
+				    It's now easier than ever to promote your products and connect with restaurants! Simply create your business entry and begin to create products.
+                    Restaurants will be able to choose from any of your products with a click of a button!
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" ui-sref="distributor">Add Your Distributor!</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="jumbotron">
+				<h2>
+					Restaurants!
+				</h2>
+				<p>
+				    The hassle of ordering products one by one, distributor by distributor at a time is no more! Simply add your restaurant, and products from distributors will
+                    automatically populate and can be ordered from instantly!
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" ui-sref="restaurant">Add Your Restaurant!</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-2">
+			<blockquote>
+				<p>
+					Distribute.Me is has truly revolutionized the way resataurants and distributors communicate.
+				</p> <small>Forbes<cite>Best Idea Ever</cite></small>
+			</blockquote>
+		</div>
+		<div class="col-md-2">
+			<blockquote>
+				<p>
+					Distribute.Me is the newest grounbreaking idea making it easier for restaurants to order products and manage inventory!
+				</p> <small>Business Insider<cite>Up And Coming!</cite></small>
+			</blockquote>
+		</div>
+		<div class="col-md-2">
+			<blockquote>
+				<p>
+					If there was ever a time to buy shares in Distribute.Me, its right now! This company is red hot!
+				</p> <small>Bloomberg<cite>Buy, Buy, Buy!</cite></small>
+			</blockquote>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

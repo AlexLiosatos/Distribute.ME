@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="modal-header">
+        <h1>Editing: {{modal.product.name}}</h1>
+    </div>
+    <div class="modal-body">
+        <input placeholder="{{modal.product.name}}" ng-model="modal.product.name" />
+        <input placeholder="{{modal.product.price}}" ng-model="modal.product.price" />
+        <input placeholder="{{modal.product.isOnSale}}" ng-model="modal.product.isOnSale" />
+        <input placeholder="{{modal.product.salePercentage}}" ng-model="modal.product.salePercentage" />
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="modal.ok()">Edit And Close</button>
+    </div>
+</div>
